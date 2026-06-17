@@ -19,7 +19,7 @@ export const BAKERY_INFO = {
   mapDirectionsUrl: "https://maps.google.com/?q=Hommade+Delights+Koodu+Ganapathiyar+Temple+Road+Palayi+Rd+Nileshwar+Kerala+671314",
   phone: "+91 9207098314", // Her actual contact number
   whatsapp: "919207098314", // WhatsApp API format without spaces or symbols
-  instagram: "hommade_delights_nileshwar", 
+  instagram: "hommade_delights", 
   hours: "10:00 AM - 8:00 PM",
   closedMessage: "Closes 8pm",
   openMessage: "Closes 8pm",
@@ -77,7 +77,7 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 400,
     price1kg: 700,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?auto=format&fit=crop&w=600&q=80",
+    image: "whiteforest.jpeg",
     flavors: ["White Forest Classic", "Cherry Blossom Whipped"],
     isPopular: false
   },
@@ -113,7 +113,7 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 550,
     price1kg: 950,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1508737027454-e6454ef45afd?auto=format&fit=crop&w=600&q=80",
+    image: "Butter_Scotch.jpg",
     flavors: ["Caramel Butterscotch", "Nutty Butterscotch Fudge"],
     isPopular: false
   },
@@ -186,7 +186,7 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 550,
     price1kg: 950,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1542826438-bd32f43d626f?auto=format&fit=crop&w=600&q=80",
+    image: "pink-velvet-cake.jpg",
     flavors: ["Pretty Pink Berry Velvet", "Rosewater Pink Satin"],
     isPopular: false
   },
@@ -198,7 +198,7 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 550,
     price1kg: 950,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1535141192574-5d4897c13636?auto=format&fit=crop&w=600&q=80",
+    image: "blue velvet cake.jpg",
     flavors: ["Royal Blue Velvet Cream", "Blue Lagoon Saffron Frost"],
     isPopular: false
   },
@@ -273,7 +273,7 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 550,
     price1kg: 950,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1519340332824-d10d2d4081ef?auto=format&fit=crop&w=600&q=80",
+    image: "white chocolate truffle cake.png",
     flavors: ["Bespoke White Chocolate Ganache", "White Truffle Crunch"],
     isPopular: false
   },
