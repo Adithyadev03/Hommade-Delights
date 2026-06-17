@@ -17,8 +17,8 @@ export const BAKERY_INFO = {
   priceTier: "₹400–1,200",
   address: "Koodu, Ganapathiyar Temple Road, Palayi Rd, Nileshwar, Kerala 671314",
   mapDirectionsUrl: "https://maps.google.com/?q=Hommade+Delights+Koodu+Ganapathiyar+Temple+Road+Palayi+Rd+Nileshwar+Kerala+671314",
-  phone: "+91 98471 23456", // Mock but realistic Kerala phone styling
-  whatsapp: "919847123456", // No spacing format for API
+  phone: "+91 9207098314", // Mock but realistic Kerala phone styling
+  whatsapp: "919207098314", // No spacing format for API
   instagram: "hommade_delights_nileshwar", 
   hours: "10:00 AM - 8:00 PM",
   closedMessage: "Closes 8pm",
