@@ -89,7 +89,10 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
           {/* Right Action buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <div className="flex items-center space-x-1.5 px-3 py-1 bg-emerald-50 text-emerald-800 rounded-full text-xs font-medium border border-emerald-100">
-              <span className="h-2 w-2 rounded-full bg-emerald-500 animate-ping"></span>
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              </span>
               <Clock className="h-3.5 w-3.5 text-emerald-600" />
               <span>{BAKERY_INFO.openMessage}</span>
             </div>
@@ -106,9 +109,13 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
 
           {/* Mobile hamburger menu */}
           <div className="flex items-center space-x-2 md:hidden">
-            <div className="flex items-center space-x-1 px-2.5 py-1 bg-emerald-50 text-emerald-800 rounded-full text-[11px] font-medium border border-emerald-100">
-              <Clock className="h-3 w-3 text-emerald-600 animate-pulse" />
-              <span>Open</span>
+            <div className="flex items-center space-x-1.5 px-2.5 py-1 bg-emerald-50 text-emerald-800 rounded-full text-[11px] font-medium border border-emerald-100">
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
+              </span>
+              <Clock className="h-3 w-3 text-emerald-600" />
+              <span>{BAKERY_INFO.openMessage}</span>
             </div>
             
             <button

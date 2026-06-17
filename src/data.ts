@@ -22,7 +22,7 @@ export const BAKERY_INFO = {
   instagram: "hommade_delights_nileshwar", 
   hours: "10:00 AM - 8:00 PM",
   closedMessage: "Closes 8pm",
-  openMessage: "Open · Closes 8pm",
+  openMessage: "Closes 8pm",
 };
 
 export const INITIAL_REVIEWS: Review[] = [
