@@ -53,7 +53,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="h-4 w-4 text-emerald-400 flex-shrink-0" />
-                <span>+91 9207098314</span>
+                <span>{BAKERY_INFO.phone}</span>
               </li>
             </ul>
           </div>
@@ -79,6 +79,9 @@ export default function Footer() {
             </div>
             <div className="text-[10px] text-stone-400/85 pt-1">
               Developed by- <span className="text-stone-200 font-semibold">Adithyadev.M</span>
+            </div>
+            <div className="text-[9px] text-[#A2C3A9] tracking-wider mt-0.5">
+              Full-Stack Engineering & Craft Design • Nileshwar, Kerala
             </div>
             <div className="text-[9px] text-emerald-400/80 tracking-wider">
               Bespoke Web Design & Interactive Engineering

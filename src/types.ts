@@ -3,16 +3,23 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-export type CakeCategory = 'celebration' | 'cupcakes' | 'dessert' | 'fusion';
+export type CakeCategory = 
+  | 'fresh_cream' 
+  | 'velvet' 
+  | 'fruit' 
+  | 'truffle' 
+  | 'chocolate_sponge' 
+  | 'vanilla_sponge' 
+  | 'tres_leches';
 
 export interface CakeItem {
   id: string;
   name: string;
   category: CakeCategory;
   description: string;
-  pricePerKg?: number; // for cakes
-  pricePerUnit?: number; // for cupcakes/pastries
-  unitName: string; // e.g., "1 Kg", "6 Pieces", "Cup"
+  price500g?: number;
+  price1kg: number;
+  unitName: string;
   image: string;
   flavors: string[];
   isPopular?: boolean;

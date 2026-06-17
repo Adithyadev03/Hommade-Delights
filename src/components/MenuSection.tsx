@@ -16,10 +16,14 @@ export default function MenuSection({ onSelectFlavor }: MenuSectionProps) {
   const [selectedCategory, setSelectedCategory] = useState<CakeCategory | 'all'>('all');
 
   const categories: { key: CakeCategory | 'all'; label: string }[] = [
-    { key: 'all', label: 'View All Sweets' },
-    { key: 'celebration', label: 'Celebration Cakes' },
-    { key: 'cupcakes', label: 'Gourmet Cupcakes' },
-    { key: 'dessert', label: 'Cream Desserts' }
+    { key: 'all', label: 'All Cakes' },
+    { key: 'fresh_cream', label: 'Fresh Cream' },
+    { key: 'velvet', label: 'Velvet Cakes' },
+    { key: 'fruit', label: 'Fruit Cakes' },
+    { key: 'truffle', label: 'Truffles' },
+    { key: 'chocolate_sponge', label: 'Chocolate Sponge' },
+    { key: 'vanilla_sponge', label: 'Vanilla Sponge' },
+    { key: 'tres_leches', label: 'Tres Leches' }
   ];
 
   const filteredItems = selectedCategory === 'all' 
@@ -45,13 +49,13 @@ export default function MenuSection({ onSelectFlavor }: MenuSectionProps) {
         </div>
 
         {/* Category Filters */}
-        <div className="flex flex-wrap justify-center items-center gap-2 mb-12">
+        <div className="flex flex-wrap justify-center items-center gap-2 mb-12 max-w-5xl mx-auto">
           {categories.map((cat) => (
             <button
               key={cat.key}
               type="button"
               onClick={() => setSelectedCategory(cat.key)}
-              className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all ${
+              className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all ${
                 selectedCategory === cat.key
                   ? 'bg-emerald-800 text-white shadow-md shadow-emerald-950/20 scale-102'
                   : 'bg-stone-50 hover:bg-[#FAF9F5] text-stone-700 hover:text-emerald-950 border border-stone-200/60'
@@ -65,9 +69,6 @@ export default function MenuSection({ onSelectFlavor }: MenuSectionProps) {
         {/* Menu Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
           {filteredItems.map((item) => {
-            const hasPriceKg = !!item.pricePerKg;
-            const price = hasPriceKg ? item.pricePerKg : item.pricePerUnit;
-
             return (
               <div 
                 key={item.id} 
@@ -122,17 +123,27 @@ export default function MenuSection({ onSelectFlavor }: MenuSectionProps) {
                     </div>
                   </div>
 
-                  <div className="pt-4 border-t border-emerald-100/40 flex items-center justify-between">
-                    <div>
-                      <span className="block text-[10px] uppercase font-mono text-stone-500 tracking-wider">Prices starting at</span>
-                      <span className="font-serif text-lg sm:text-xl font-bold text-emerald-950">
-                        ₹{price} <span className="text-xs font-sans text-stone-500 font-normal">/ {item.category === 'celebration' ? 'Kg' : 'Unit'}</span>
-                      </span>
+                  <div className="pt-4 border-t border-emerald-100/40 flex items-center justify-between gap-4">
+                    <div className="flex flex-col gap-0.5 text-left">
+                      {item.price500g ? (
+                        <>
+                          <div className="text-xs font-medium text-stone-500">
+                            500g: <span className="font-serif text-sm font-bold text-emerald-950">₹{item.price500g}</span>
+                          </div>
+                          <div className="text-xs font-medium text-stone-500">
+                            1 Kg: <span className="font-serif text-sm font-bold text-emerald-950">₹{item.price1kg}</span>
+                          </div>
+                        </>
+                      ) : (
+                        <div className="text-xs font-medium text-stone-500">
+                          1 Kg: <span className="font-serif text-base font-bold text-emerald-950">₹{item.price1kg}</span>
+                        </div>
+                      )}
                     </div>
 
                     <button
                       type="button"
-                      onClick={() => onSelectFlavor(item.flavors[0])}
+                      onClick={() => onSelectFlavor(item.name)}
                       className="px-4 py-2 bg-emerald-100 hover:bg-emerald-800 text-emerald-950 hover:text-white rounded-xl text-xs font-semibold tracking-wide transition-all inline-flex items-center space-x-1"
                     >
                       <span>Order Custom</span>

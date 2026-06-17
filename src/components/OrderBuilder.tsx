@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Cake, ShoppingBag, Send, Copy, Check, Calendar, Clock, DollarSign, Gift, ToggleLeft, User, Phone } from 'lucide-react';
-import { BAKERY_INFO, SHAPES_LIST, FROSTING_STYLES } from '../data';
+import { BAKERY_INFO, SHAPES_LIST, FROSTING_STYLES, MENU_ITEMS } from '../data';
 import { CustomOrderOptions } from '../types';
 
 interface OrderBuilderProps {
@@ -15,7 +15,7 @@ interface OrderBuilderProps {
 export default function OrderBuilder({ preselectedFlavor }: OrderBuilderProps) {
   // Setup initial form status
   const [formData, setFormData] = useState<CustomOrderOptions>({
-    flavor: preselectedFlavor || 'Classic Tender Coconut',
+    flavor: preselectedFlavor || (MENU_ITEMS[0]?.name || 'White Forest Cake'),
     size: '1 Kg',
     shape: 'Round',
     message: '',
@@ -27,7 +27,7 @@ export default function OrderBuilder({ preselectedFlavor }: OrderBuilderProps) {
     notes: ''
   });
 
-  const [estimatedPrice, setEstimatedPrice] = useState(750);
+  const [estimatedPrice, setEstimatedPrice] = useState(700);
   const [copied, setCopied] = useState(false);
   const [successSent, setSuccessSent] = useState(false);
 
@@ -40,25 +40,39 @@ export default function OrderBuilder({ preselectedFlavor }: OrderBuilderProps) {
 
   // Calculate dynamic estimated price range
   useEffect(() => {
-    let basePricePerKg = 750;
-    
-    // Determine base rate depending on flavor
-    if (formData.flavor.includes('Chocolate Ganache')) basePricePerKg = 850;
-    else if (formData.flavor.includes('Red Velvet')) basePricePerKg = 950;
-    else if (formData.flavor.includes('Mango Cream')) basePricePerKg = 800;
-    else if (formData.flavor.includes('Biscoff')) basePricePerKg = 500; // Cupcake batch rate
-    else if (formData.flavor.includes('Cupcakes')) basePricePerKg = 450;
-    else if (formData.flavor.includes('Tres Leches')) basePricePerKg = 180;
-    else if (formData.flavor.includes('Custom')) basePricePerKg = 800;
+    const selectedItem = MENU_ITEMS.find(item => item.name === formData.flavor);
+    let basePrice = 700;
+    let isDualWeight = true;
+
+    if (selectedItem) {
+      isDualWeight = !!selectedItem.price500g;
+      if (formData.size === '0.5 Kg' && selectedItem.price500g) {
+        basePrice = selectedItem.price500g;
+      } else {
+        basePrice = selectedItem.price1kg;
+      }
+    } else {
+      // Fallback for custom requests
+      basePrice = 800;
+    }
 
     let multiplier = 1.0;
-    if (formData.size === '0.5 Kg') multiplier = 0.5;
-    else if (formData.size === '1.5 Kg') multiplier = 1.5;
-    else if (formData.size === '2 Kg') multiplier = 2.0;
-    else if (formData.size === '3 Kg') multiplier = 3.0;
+    if (isDualWeight) {
+      if (formData.size === '0.5 Kg') multiplier = 1.0; // Already handled by basePrice
+      else if (formData.size === '1 Kg') multiplier = 1.0;
+      else if (formData.size === '1.5 Kg') multiplier = 1.5;
+      else if (formData.size === '2 Kg') multiplier = 2.0;
+      else if (formData.size === '3 Kg') multiplier = 3.0;
+    } else {
+      // Single-weight items
+      if (formData.size === '0.5 Kg') multiplier = 0.5;
+      else if (formData.size === '1 Kg') multiplier = 1.0;
+      else if (formData.size === '1.5 Kg') multiplier = 1.5;
+      else if (formData.size === '2 Kg') multiplier = 2.0;
+      else if (formData.size === '3 Kg') multiplier = 3.0;
+    }
 
-    let calculated = Math.round(basePricePerKg * multiplier);
-
+    let calculated = Math.round(basePrice * multiplier);
     setEstimatedPrice(calculated);
   }, [formData.flavor, formData.size]);
 
@@ -160,13 +174,11 @@ export default function OrderBuilder({ preselectedFlavor }: OrderBuilderProps) {
                       onChange={handleChange}
                       className="w-full text-sm rounded-xl border border-stone-200 bg-stone-50/50 p-3 text-stone-800 outline-none focus:border-emerald-500 focus:bg-white transition-all cursor-pointer font-medium"
                     >
-                      <option value="Classic Tender Coconut">Signature Tender Coconut (₹750/Kg)</option>
-                      <option value="Rich Belgian Chocolate Ganache">Chocolate Ganache (₹850/Kg)</option>
-                      <option value="Nostalgic Red Velvet Classic">Red Velvet Classic (₹950/Kg)</option>
-                      <option value="Fresh Mango Cream Dream">Fresh Mango Cream (₹800/Kg)</option>
-                      <option value="Intense Chocolate Fudge Cupcakes">Chocolate Cupcakes batch (₹450/6pcs)</option>
-                      <option value="Caramel Biscoff Crumble Cupcakes">Biscoff Cupcakes batch (₹500/6pcs)</option>
-                      <option value="Three-Milk Soaked Tres Leches">Individual Tres Leches (₹180/ea)</option>
+                      {MENU_ITEMS.map((item) => (
+                        <option key={item.id} value={item.name}>
+                          {item.name} {item.price500g ? `(₹${item.price1kg}/Kg)` : `(₹${item.price1kg})`}
+                        </option>
+                      ))}
                       <option value="Custom Bespoke Flavor">Custom Request (Specify in Notes)</option>
                     </select>
                   </div>

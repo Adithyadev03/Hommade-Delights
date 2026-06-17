@@ -40,7 +40,7 @@ export default function AboutSection() {
           <div className="lg:col-span-5 space-y-6 relative">
             <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white transform hover:rotate-1 transition-transform duration-500">
               <img 
-                src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80" 
+                src="/anjana.jpeg" 
                 alt="Chef Anjana preparing fresh cake frosting" 
                 className="w-full h-80 lg:h-96 object-cover"
                 referrerPolicy="no-referrer"
