@@ -18,7 +18,6 @@ export default function OrderBuilder({ preselectedFlavor }: OrderBuilderProps) {
     flavor: preselectedFlavor || 'Classic Tender Coconut',
     size: '1 Kg',
     shape: 'Round',
-    eggless: false,
     message: '',
     frostingStyle: 'Smooth / Minimal',
     customerName: '',
@@ -60,21 +59,12 @@ export default function OrderBuilder({ preselectedFlavor }: OrderBuilderProps) {
 
     let calculated = Math.round(basePricePerKg * multiplier);
 
-    // Eggless premium (e.g. specialized vegan replacements cost standard +₹50 per Kg)
-    if (formData.eggless) {
-      calculated += Math.round(50 * (multiplier || 1.0));
-    }
-
     setEstimatedPrice(calculated);
-  }, [formData.flavor, formData.size, formData.eggless]);
+  }, [formData.flavor, formData.size]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleToggleEggless = () => {
-    setFormData(prev => ({ ...prev, eggless: !prev.eggless }));
   };
 
   // Compose gorgeous WhatsApp text
@@ -93,7 +83,6 @@ export default function OrderBuilder({ preselectedFlavor }: OrderBuilderProps) {
       `• *Flavor Select:* ${formData.flavor}`,
       `• *Cake Size:* ${formData.size}`,
       `• *Shape:* ${formData.shape}`,
-      `• *Eggless Option:* ${formData.eggless ? '✅ YES (100% Vegetarian)' : '❌ No'}`,
       `• *Frosting Design Style:* ${formData.frostingStyle}`,
       `• *Custom Inscription on Cake:* "${formData.message || 'None'}"`,
       ``,
@@ -200,40 +189,18 @@ export default function OrderBuilder({ preselectedFlavor }: OrderBuilderProps) {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {/* Shape Dropdown */}
-                  <div className="space-y-1.5">
-                    <label className="text-xs font-semibold text-stone-700">Cake Base Shape</label>
-                    <select
-                      name="shape"
-                      value={formData.shape}
-                      onChange={handleChange}
-                      className="w-full text-sm rounded-xl border border-stone-200 bg-stone-50/50 p-3 text-stone-800 outline-none focus:border-emerald-500 focus:bg-white transition-all cursor-pointer font-medium"
-                    >
-                      {SHAPES_LIST.map((sh, idx) => (
-                        <option key={idx} value={sh}>{sh}</option>
-                      ))}
-                    </select>
-                  </div>
-
-                  {/* Eggless Option Button switcher */}
-                  <div className="space-y-1.5">
-                    <label className="text-xs font-semibold text-stone-700">Egg Preference</label>
-                    <button
-                      type="button"
-                      onClick={handleToggleEggless}
-                      className={`w-full flex items-center justify-between p-2.5 rounded-xl border text-sm font-medium transition-all ${
-                        formData.eggless 
-                          ? 'border-emerald-300 bg-emerald-50 text-emerald-900 shadow-xs' 
-                          : 'border-stone-200 bg-stone-50 text-stone-600 hover:bg-stone-100'
-                      }`}
-                    >
-                      <span>100% Eggless Vegetarian Recipe (+₹50/kg)</span>
-                      <div className={`h-6 w-11 rounded-full p-0.5 transition-colors ${formData.eggless ? 'bg-emerald-500' : 'bg-stone-300'} flex items-center`}>
-                        <div className={`h-5 w-5 rounded-full bg-white shadow-sm transform transition-transform ${formData.eggless ? 'translate-x-5' : 'translate-x-0'}`}></div>
-                      </div>
-                    </button>
-                  </div>
+                <div className="space-y-1.5">
+                  <label className="text-xs font-semibold text-stone-700">Cake Base Shape</label>
+                  <select
+                    name="shape"
+                    value={formData.shape}
+                    onChange={handleChange}
+                    className="w-full text-sm rounded-xl border border-stone-200 bg-stone-50/50 p-3 text-stone-800 outline-none focus:border-emerald-500 focus:bg-white transition-all cursor-pointer font-medium"
+                  >
+                    {SHAPES_LIST.map((sh, idx) => (
+                      <option key={idx} value={sh}>{sh}</option>
+                    ))}
+                  </select>
                 </div>
               </div>
 
@@ -409,12 +376,6 @@ export default function OrderBuilder({ preselectedFlavor }: OrderBuilderProps) {
                   <div className="flex items-center justify-between">
                     <span className="text-stone-500">Shape Choice:</span>
                     <span className="font-semibold text-stone-900">{formData.shape}</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-stone-500">Eggless Grade:</span>
-                    <span className="font-semibold text-emerald-800">
-                      {formData.eggless ? 'Eggless (Vegetarian)' : 'Regular (With Egg)'}
-                    </span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-stone-500">Frosting Look:</span>

@@ -38,7 +38,6 @@ export interface CustomOrderOptions {
   flavor: string;
   size: string; // "0.5 Kg", "1 Kg", "1.5 Kg", "2 Kg+"
   shape: string; // "Round", "Heart", "Square"
-  eggless: boolean;
   message: string;
   frostingStyle: string; // "Smooth / Minimal", "Textured Cream", "Rustic Naked", "Floral Piping"
   customerName: string;

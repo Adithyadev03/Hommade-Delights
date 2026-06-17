@@ -21,8 +21,8 @@ export default function ContactSection() {
       a: "Most customers choose self-pickup from our home kitchen at Ganapathiyar Temple Road. However, we coordinate comfortable and safe home deliveries of delicate structures in and around Nileshwar, Cheruvathur, and Kanhangad for a minimal transport fee."
     },
     {
-      q: "Are the cakes 100% eggless and suitable for vegetarians?",
-      a: "Yes! We can bake 100% vegetarian/eggless variations for all of our recipes. They are prepared under strict hygienic conditions using separate, pristine bake-wares."
+      q: "Do you use artificial sweeteners or chemical preservatives?",
+      a: "Absolutely not. Anjana bakes entirely from scratch using premium dairy butter, rich cocoa, natural vanilla extracts, and wholesome ingredients with absolutely zero chemical stabilizers or artificial extenders."
     },
     {
       q: "How does payment work for home bakes?",
