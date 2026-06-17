@@ -72,9 +72,17 @@ export default function Footer() {
         </div>
 
         {/* Bottom copyright detail line */}
-        <div className="pt-12 mt-12 border-t border-[#132218] flex flex-col sm:flex-row items-center justify-between gap-4 text-stone-400 text-xs font-mono font-medium">
-          <div>
-            © {new Date().getFullYear()} Hommade Delights Nileshwar. All rights reserved.
+        <div className="pt-12 mt-12 border-t border-[#132218] flex flex-col sm:flex-row items-center justify-between gap-6 text-stone-400 text-xs font-mono font-medium">
+          <div className="space-y-1 text-center sm:text-left">
+            <div>
+              © {new Date().getFullYear()} Hommade Delights Nileshwar. All rights reserved.
+            </div>
+            <div className="text-[10px] text-stone-400/85 pt-1">
+              Developed by- <span className="text-stone-200 font-semibold">Adithyadev.M</span>
+            </div>
+            <div className="text-[9px] text-emerald-400/80 tracking-wider">
+              Bespoke Web Design & Interactive Engineering
+            </div>
           </div>
           <div className="flex items-center space-x-1.5">
             <span>Crafted with</span>
