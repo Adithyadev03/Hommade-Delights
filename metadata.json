@@ -1,0 +1,6 @@
+{
+  "name": "Hommade Delights",
+  "description": "An elegant, bespoke website for Hommade Delights – an artisanal home bakery in Nileshwar, Kerala. Explore our custom cakes, read reviews, and build your perfect baked treat.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
