@@ -137,7 +137,7 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 650,
     price1kg: 1200,
     unitName: "500g / 1 Kg",
-    image: "nuttyvancho.jpg",
+    image: "nutty vencho.png",
     flavors: ["Premium Double-Nutty Vancho", "Caramelized Nutty Choco-Vancho"],
     isPopular: true
   },
@@ -259,9 +259,22 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 650,
     price1kg: 1200,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1550617931-e17a7b70dce2?auto=format&fit=crop&w=600&q=80",
+    image: "strawbery.jpg",
     flavors: ["Seasonal fresh strawberry", "Strawberry Cream Cheese Blend"],
     isPopular: true
+  },
+  {
+    id: "fr-rum-fruit",
+    name: "Rum Fruit Cake",
+    category: "fruit",
+    description: "A rich Christmas special packed with dried fruits, nuts, and hand-ground spices pre-soaked in dark rum for a warm, festive holiday flavour.",
+    price500g: 500,
+    price1kg: 1000,
+    unitName: "500g / 1 Kg",
+    image: "rumcake.jpg",
+    flavors: ["Traditional Rum-Aged Spiced Fruit", "Non-Alcoholic Festive Fruit Blend"],
+    isPopular: false,
+    isSeasonal: true
   },
 
   // --- TRUFFLE ---
@@ -285,7 +298,7 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 550,
     price1kg: 950,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80",
+    image: "milk chocolate truffle.jpg",
     flavors: ["Pure Milk Truffle Mousse", "Silk Milk Ganache"],
     isPopular: false
   },
@@ -323,7 +336,7 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 700,
     price1kg: 1300,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1622896784083-cc051313dbab?auto=format&fit=crop&w=600&q=80",
+    image: "spanish delight.jpg",
     flavors: ["Authentic Spanish Delight", "Spiced Nutty Chocolatier"],
     isPopular: true
   },
@@ -335,7 +348,7 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 750,
     price1kg: 1500,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1511018556340-d16986a1c194?auto=format&fit=crop&w=600&q=80",
+    image: "chocolateoverload.jpg",
     flavors: ["Death by Overloaded Chocolate", "Triple Fudge Extra Fudge"],
     isPopular: true
   },
@@ -347,7 +360,7 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 650,
     price1kg: 1250,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1542826438-bd32f43d626f?auto=format&fit=crop&w=600&q=80",
+    image: "chocofryfruit.jpg",
     flavors: ["Baking-Rich Chocolatier Dry Fruit", "Dates & Almond Chocolatier"],
     isPopular: false
   },
@@ -359,7 +372,7 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 650,
     price1kg: 1200,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1534120247760-c44c3e4a62f1?auto=format&fit=crop&w=600&q=80",
+    image: "choconuts.jpg",
     flavors: ["Dark Choco Toasted Hazelnuts", "Cashew Crunch Chocolate"],
     isPopular: false
   },
@@ -371,7 +384,7 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 550,
     price1kg: 1000,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=600&q=80",
+    image: "oreo cake.jpg",
     flavors: ["Creamy Cookies & Oreo Dream"],
     isPopular: false
   },
@@ -383,7 +396,7 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 850,
     price1kg: 1600,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1558961309-db6262759838?auto=format&fit=crop&w=600&q=80",
+    image: "kitkat.jpg",
     flavors: ["Carnival Kitkat Gems Delight"],
     isPopular: true
   },
@@ -397,7 +410,7 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 650,
     price1kg: 1200,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=600&q=80",
+    image: "milkynuts.jpg",
     flavors: ["Signature Milky Nuts Classic", "Pista Almond Cream Soak"],
     isPopular: false
   },
@@ -409,7 +422,7 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 650,
     price1kg: 1200,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1508737027454-e6454ef45afd?auto=format&fit=crop&w=600&q=80",
+    image: "milkybutterscotch.jpg",
     flavors: ["Milky Caramel Butterscotch"],
     isPopular: false
   },
@@ -421,7 +434,7 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 650,
     price1kg: 1200,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=600&q=80",
+    image: "honeyalmond.jpg",
     flavors: ["Rich Honey Almond Glaze", "Bee Sweet Almond Crunch"],
     isPopular: true
   },
@@ -433,7 +446,7 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 600,
     price1kg: 1100,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?auto=format&fit=crop&w=600&q=80",
+    image: "kulfi.jpg",
     flavors: ["Royal Saffron Pistachio Kulfi", "Matka Kulfi Fusion"],
     isPopular: false
   },
@@ -495,20 +508,8 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 650,
     price1kg: 1300,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1534120247760-c44c3e4a62f1?auto=format&fit=crop&w=600&q=80",
+    image: "pista leches.jpeg",
     flavors: ["Pista Milk soak with Rose Cream"],
-    isPopular: false
-  },
-  {
-    id: "tl-rosemilk-pista",
-    name: "Rosemilk Pista Tres Leches",
-    category: "tres_leches",
-    description: "Sweet rose milk doused cake topped with highly premium crushed green pistachio layout.",
-    price500g: 650,
-    price1kg: 1300,
-    unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1511018556340-d16986a1c194?auto=format&fit=crop&w=600&q=80",
-    flavors: ["Rosewater Soak with Pistachio Crunch"],
     isPopular: false
   },
   {
@@ -522,6 +523,126 @@ export const MENU_ITEMS: CakeItem[] = [
     image: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?auto=format&fit=crop&w=600&q=80",
     flavors: ["Authentic Golden Caramel Soak", "Caramelized Turkish Glory"],
     isPopular: true
+  },
+
+  // --- BROWNIES ---
+  {
+    id: "br-red-velvet",
+    name: "Red Velvet Brownie (9 piece)",
+    category: "brownies",
+    description: "Super fudgy, dense red velvet brownies layered with sweet chocolate chip folds and elegant sugar dustings.",
+    price1kg: 600,
+    unitName: "9 Piece Box",
+    image: "redvelvetbrownie.jpg",
+    flavors: ["Fudgy Red Velvet"],
+    isPopular: false
+  },
+  {
+    id: "br-chocolate",
+    name: "Chocolate Brownie (9 piece)",
+    category: "brownies",
+    description: "Classic intensely rich, double-chocolate fudgy brownies baked with premium Dutch cocoa and overloaded with semisweet chips.",
+    price1kg: 550,
+    unitName: "9 Piece Box",
+    image: "chocobrownie.jpg",
+    flavors: ["Double Chocolate Fudgy"],
+    isPopular: false
+  },
+  {
+    id: "br-nutella",
+    name: "Nutella Brownie (9 piece)",
+    category: "brownies",
+    description: "Gooey chocolate fudgy brownie base heavily swirled with premium creamy Nutella hazelnut spread for ultimate rich decadence.",
+    price1kg: 600,
+    unitName: "9 Piece Box",
+    image: "nutella brownie.jpg",
+    flavors: ["Nutella Swirl Fudgy"],
+    isPopular: true
+  },
+  {
+    id: "br-mixed",
+    name: "Mixed Brownie Box (8 piece)",
+    category: "brownies",
+    description: "The perfect sampler containing 4 white chocolate blondie pieces and 4 dark chocolate fudgy brownies to please everyone. (4 white + 4 dark)",
+    price1kg: 420,
+    unitName: "8 Pieces",
+    image: "mixedbrownie.jpg",
+    flavors: ["4 White + 4 Dark Duo"],
+    isPopular: false
+  },
+
+  // --- CAKES & DESSERTS (DREAM & CARROT CAKES) ---
+  {
+    id: "cd-white-chocolate-dream",
+    name: "White Chocolate Dream Cake",
+    category: "cakes_desserts",
+    description: "Indulgent five-layer custom tin-in-can dream cake layered with rich white chocolate sponge, creamy mousse, white ganache, and solid chocolate crack shell.",
+    price500g: 550,
+    price1kg: 1100,
+    unitName: "500g / 1 Kg",
+    image: "whitechocodream.jpg",
+    flavors: ["Dreamy Cream White Chocolate"],
+    isPopular: true
+  },
+  {
+    id: "cd-mango-dream",
+    name: "Mango Dream Cake",
+    category: "cakes_desserts",
+    description: "Lush five-layer tropical dream cake featuring smooth Alphonso mango compote layered with sweet vanilla cream and a hard snap-top shell inside a decorative tin.",
+    price500g: 650,
+    price1kg: 1300,
+    unitName: "500g / 1 Kg",
+    image: "mango dream.jpg",
+    flavors: ["Alphonso Mango Dream Layer"],
+    isPopular: true,
+    isSeasonal: true
+  },
+  {
+    id: "cd-carrot-dates",
+    name: "Carrot Dates Cake",
+    category: "cakes_desserts",
+    description: "Perfect, wholesome moist tea-time cake packed with hand-grated fresh carrots, sweet imported Saudi dates, raw butter, and roasted cashew pieces.",
+    price500g: 300,
+    price1kg: 600,
+    unitName: "500g / 1 Kg",
+    image: "carrotdate.jpg",
+    flavors: ["Classic Carrot & Date Spiced"],
+    isPopular: false
+  },
+
+  // --- SPECIALTY ITEMS ---
+  {
+    id: "sp-cakesicles",
+    name: "Cakesicles (Chocolate) 4 piece",
+    category: "specialty",
+    description: "Adorable rich chocolate cake pops on wooden sticks, coated with a hard chocolate candy shell, sprinkles, and elegant decorative drizzles. (₹80 per piece)",
+    price1kg: 320,
+    unitName: "4 Pieces",
+    image: "cakesicles.jpg",
+    flavors: ["Double Chocolate Cakesicle"],
+    isPopular: false
+  },
+  {
+    id: "sp-blondies",
+    name: "White Chocolate Blondies 9 piece",
+    category: "specialty",
+    description: "Irresistibly dense and chewy bars baked with caramelized brown butter, rich vanilla, and chunks of melt-in-the-mouth Belgian white chocolate. (₹600 per box)",
+    price1kg: 600,
+    unitName: "9 Pieces",
+    image: "whitechocoblond.jpg",
+    flavors: ["Gourmet White Chocolate Blondie"],
+    isPopular: false
+  },
+  {
+    id: "sp-vanilla-popsicles",
+    name: "Vanilla Popsicles 6 piece",
+    category: "specialty",
+    description: "Charming rich vanilla cake pops on wooden sticks, coated with a sweet white chocolate candy shell, pastel sprinkles, and elegant decorative chocolate drizzles. (₹25 per piece)",
+    price1kg: 150,
+    unitName: "6 Pieces",
+    image: "vanilla popsicles-1.jpg",
+    flavors: ["Classic Creamy Vanilla Popsicle"],
+    isPopular: false
   }
 ];
 

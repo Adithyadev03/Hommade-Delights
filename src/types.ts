@@ -10,7 +10,10 @@ export type CakeCategory =
   | 'truffle' 
   | 'chocolate_sponge' 
   | 'vanilla_sponge' 
-  | 'tres_leches';
+  | 'tres_leches'
+  | 'brownies'
+  | 'cakes_desserts'
+  | 'specialty';
 
 export interface CakeItem {
   id: string;
@@ -23,6 +26,7 @@ export interface CakeItem {
   image: string;
   flavors: string[];
   isPopular?: boolean;
+  isSeasonal?: boolean;
 }
 
 export interface Review {

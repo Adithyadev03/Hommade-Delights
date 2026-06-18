@@ -63,8 +63,8 @@ export default function AboutSection() {
             {/* Secondary atmospheric image */}
             <div className="hidden sm:block absolute -top-8 -left-8 w-44 h-44 rounded-2xl overflow-hidden shadow-lg border-2 border-white transform -rotate-3 hover:rotate-0 transition-transform duration-300 z-10">
               <img 
-                src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=400&q=80" 
-                alt="Fresh high quality baking raw ingredients" 
+                src="/tender coconut.jpg" 
+                alt="Delicious layered hand-scooped Tender Coconut Cake" 
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />

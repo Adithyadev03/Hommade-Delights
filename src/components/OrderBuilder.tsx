@@ -45,9 +45,21 @@ export default function OrderBuilder({ preselectedFlavor }: OrderBuilderProps) {
     }
   }, [preselectedFlavor]);
 
+  const selectedItem = MENU_ITEMS.find(item => item.name === formData.flavor);
+
+  // Synchronize size options and value when switching between cakes and boxed treats
+  useEffect(() => {
+    if (!selectedItem) return;
+    const isBoxItem = selectedItem.category === 'brownies' || selectedItem.category === 'specialty';
+    if (isBoxItem && !formData.size.includes('Box')) {
+      setFormData(prev => ({ ...prev, size: '1 Box' }));
+    } else if (!isBoxItem && formData.size.includes('Box')) {
+      setFormData(prev => ({ ...prev, size: '1 Kg' }));
+    }
+  }, [formData.flavor, selectedItem]);
+
   // Calculate dynamic estimated price range
   useEffect(() => {
-    const selectedItem = MENU_ITEMS.find(item => item.name === formData.flavor);
     let basePrice = 700;
     let isDualWeight = true;
 
@@ -64,24 +76,15 @@ export default function OrderBuilder({ preselectedFlavor }: OrderBuilderProps) {
     }
 
     let multiplier = 1.0;
-    if (isDualWeight) {
-      if (formData.size === '0.5 Kg') multiplier = 1.0; // Already handled by basePrice
-      else if (formData.size === '1 Kg') multiplier = 1.0;
-      else if (formData.size === '1.5 Kg') multiplier = 1.5;
-      else if (formData.size === '2 Kg') multiplier = 2.0;
-      else if (formData.size === '3 Kg') multiplier = 3.0;
-    } else {
-      // Single-weight items
-      if (formData.size === '0.5 Kg') multiplier = 0.5;
-      else if (formData.size === '1 Kg') multiplier = 1.0;
-      else if (formData.size === '1.5 Kg') multiplier = 1.5;
-      else if (formData.size === '2 Kg') multiplier = 2.0;
-      else if (formData.size === '3 Kg') multiplier = 3.0;
-    }
+    if (formData.size.includes('3')) multiplier = 3.0;
+    else if (formData.size.includes('2')) multiplier = 2.0;
+    else if (formData.size.includes('1.5')) multiplier = 1.5;
+    else if (formData.size.includes('0.5')) multiplier = isDualWeight ? 1.0 : 0.5;
+    else if (formData.size.includes('1')) multiplier = 1.0;
 
     let calculated = Math.round(basePrice * multiplier);
     setEstimatedPrice(calculated);
-  }, [formData.flavor, formData.size]);
+  }, [formData.flavor, formData.size, selectedItem]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -199,11 +202,21 @@ export default function OrderBuilder({ preselectedFlavor }: OrderBuilderProps) {
                       onChange={handleChange}
                       className="w-full text-sm rounded-xl border border-stone-200 bg-stone-50/50 p-3 text-stone-800 outline-none focus:border-emerald-500 focus:bg-white transition-all cursor-pointer font-medium"
                     >
-                      <option value="0.5 Kg">0.5 Kg (Perfect for small group of 3-4)</option>
-                      <option value="1 Kg">1 Kg (Standard Family Celebration)</option>
-                      <option value="1.5 Kg">1.5 Kg (Larger Anniversary size)</option>
-                      <option value="2 Kg">2.0 Kg (Double Decker Setup)</option>
-                      <option value="3 Kg">3.0 Kg (Grand Event Tier)</option>
+                      {selectedItem && (selectedItem.category === 'brownies' || selectedItem.category === 'specialty') ? (
+                        <>
+                          <option value="1 Box">1 Box ({selectedItem.unitName})</option>
+                          <option value="2 Boxes">2 Boxes ({parseInt(selectedItem.unitName) ? parseInt(selectedItem.unitName) * 2 : ''} pieces)</option>
+                          <option value="3 Boxes">3 Boxes ({parseInt(selectedItem.unitName) ? parseInt(selectedItem.unitName) * 3 : ''} pieces)</option>
+                        </>
+                      ) : (
+                        <>
+                          <option value="0.5 Kg">0.5 Kg (Perfect for small group of 3-4)</option>
+                          <option value="1 Kg">1 Kg (Standard Family Celebration)</option>
+                          <option value="1.5 Kg">1.5 Kg (Larger Anniversary size)</option>
+                          <option value="2 Kg">2.0 Kg (Double Decker Setup)</option>
+                          <option value="3 Kg">3.0 Kg (Grand Event Tier)</option>
+                        </>
+                      )}
                     </select>
                   </div>
                 </div>
@@ -390,7 +403,7 @@ export default function OrderBuilder({ preselectedFlavor }: OrderBuilderProps) {
                     <span className="font-semibold text-stone-900 text-right text-xs sm:text-sm">{formData.flavor}</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-stone-500">Weight Metric:</span>
+                    <span className="text-stone-500">Size / Portion:</span>
                     <span className="font-semibold text-stone-900">{formData.size}</span>
                   </div>
                   <div className="flex items-center justify-between">

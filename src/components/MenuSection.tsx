@@ -16,14 +16,17 @@ export default function MenuSection({ onSelectFlavor }: MenuSectionProps) {
   const [selectedCategory, setSelectedCategory] = useState<CakeCategory | 'all'>('all');
 
   const categories: { key: CakeCategory | 'all'; label: string }[] = [
-    { key: 'all', label: 'All Cakes' },
+    { key: 'all', label: 'All Items' },
     { key: 'fresh_cream', label: 'Fresh Cream' },
     { key: 'velvet', label: 'Velvet Cakes' },
     { key: 'fruit', label: 'Fruit Cakes' },
     { key: 'truffle', label: 'Truffles' },
     { key: 'chocolate_sponge', label: 'Chocolate Sponge' },
     { key: 'vanilla_sponge', label: 'Vanilla Sponge' },
-    { key: 'tres_leches', label: 'Tres Leches' }
+    { key: 'tres_leches', label: 'Tres Leches' },
+    { key: 'brownies', label: 'Brownies' },
+    { key: 'cakes_desserts', label: 'Cakes & Desserts' },
+    { key: 'specialty', label: 'Specialty Items' }
   ];
 
   const filteredItems = selectedCategory === 'all' 
@@ -85,11 +88,20 @@ export default function MenuSection({ onSelectFlavor }: MenuSectionProps) {
                   />
                   
                   {/* Floating Tags */}
-                  {item.isPopular && (
-                    <div className="absolute top-4 left-4 bg-emerald-800 text-emerald-50 text-[10px] font-mono font-bold tracking-wider uppercase px-2.5 py-1 rounded-full shadow-sm">
-                      Bestseller 🔥
-                    </div>
-                  )}
+                  <div className="absolute top-4 left-4 flex flex-col gap-1.5 z-10">
+                    {item.isPopular && (
+                      <span className="bg-emerald-800 text-emerald-50 text-[10px] font-mono font-bold tracking-wider uppercase px-2.5 py-1 rounded-full shadow-sm self-start">
+                        Bestseller 🔥
+                      </span>
+                    )}
+                    {item.isSeasonal && (
+                      <span className="bg-amber-600 text-white text-[10px] font-mono font-bold tracking-wider uppercase px-2.5 py-1 rounded-full shadow-sm self-start">
+                        {item.name.toLowerCase().includes('rum') || item.name.toLowerCase().includes('christmas')
+                          ? 'Christmas Special 🎄'
+                          : 'Seasonal Special 🥭'}
+                      </span>
+                    )}
+                  </div>
 
                   <div className="absolute bottom-3 right-3 bg-white/90 backdrop-blur-xs text-emerald-950 text-xs font-mono font-bold px-3 py-1 rounded-lg shadow-xs">
                     {item.unitName}
@@ -136,7 +148,7 @@ export default function MenuSection({ onSelectFlavor }: MenuSectionProps) {
                         </>
                       ) : (
                         <div className="text-xs font-medium text-stone-500">
-                          1 Kg: <span className="font-serif text-base font-bold text-emerald-950">₹{item.price1kg}</span>
+                          {item.unitName.includes('Kg') ? '1 Kg: ' : 'Price: '}<span className="font-serif text-base font-bold text-emerald-950">₹{item.price1kg}</span>
                         </div>
                       )}
                     </div>

@@ -177,7 +177,7 @@ export default function App() {
                   {/* Main premium cake picture */}
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/5] bg-stone-100">
                     <img 
-                      src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" 
+                      src="cover.jpg" 
                       alt="Hommade Delights Signature elegant chocolate frosting layered cake" 
                       className="w-full h-full object-cover transform hover:scale-102 transition-transform duration-700"
                       referrerPolicy="no-referrer"
@@ -187,8 +187,8 @@ export default function App() {
                     <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-xs p-4 rounded-xl border border-emerald-100 shadow-md">
                       <div className="flex items-center justify-between">
                         <div>
-                          <p className="text-[10px] font-mono uppercase tracking-widest text-emerald-800 font-bold">Local Best-Seller</p>
-                          <h4 className="font-serif text-sm sm:text-base font-bold text-emerald-950">Tender Coconut (Karikku)</h4>
+                          <p className="text-[10px] font-mono uppercase tracking-widest text-emerald-800 font-bold">Birthday Specials</p>
+                          <h4 className="font-serif text-sm sm:text-base font-bold text-emerald-950">Made with love ❤️</h4>
                         </div>
                         <div className="bg-emerald-50 p-2 rounded-lg">
                           <Cake className="h-5 w-5 text-emerald-800" />
