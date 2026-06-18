@@ -27,6 +27,7 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
   const navItems = [
     { id: 'about', label: 'Our Story' },
     { id: 'menu', label: 'Dessert Menu' },
+    { id: 'gallery', label: 'Custom Gallery' },
     { id: 'order', label: 'Design Your Cake' },
     { id: 'reviews', label: 'Reviews' },
     { id: 'contact', label: 'Find Us' }

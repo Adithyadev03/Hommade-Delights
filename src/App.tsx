@@ -12,6 +12,7 @@ import MenuSection from './components/MenuSection';
 import OrderBuilder from './components/OrderBuilder';
 import ReviewsSection from './components/ReviewsSection';
 import ContactSection from './components/ContactSection';
+import CustomCakesGallery from './components/CustomCakesGallery';
 import Footer from './components/Footer';
 
 export default function App() {
@@ -48,7 +49,7 @@ export default function App() {
   // Intersection Observer to update active navigation dots
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['hero', 'about', 'menu', 'order', 'reviews', 'contact'];
+      const sections = ['hero', 'about', 'menu', 'gallery', 'order', 'reviews', 'contact'];
       const scrollPosition = window.scrollY + 120;
 
       for (const section of sections) {
@@ -223,6 +224,9 @@ export default function App() {
 
         {/* DESSERTS MENU CATALOG SECTION */}
         <MenuSection onSelectFlavor={handleSelectFlavor} />
+
+        {/* CUSTOM CAKES GALLERY SHOWCASE */}
+        <CustomCakesGallery onSelectFlavor={handleSelectFlavor} />
 
         {/* CUSTOM CAKE ORDER MODEL BUILDER */}
         <OrderBuilder preselectedFlavor={selectedFlavor} />

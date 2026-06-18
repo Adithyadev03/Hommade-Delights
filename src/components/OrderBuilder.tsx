@@ -8,6 +8,13 @@ import { Cake, ShoppingBag, Send, Copy, Check, Calendar, Clock, DollarSign, Gift
 import { BAKERY_INFO, SHAPES_LIST, FROSTING_STYLES, MENU_ITEMS } from '../data';
 import { CustomOrderOptions } from '../types';
 
+// Helper to calculate future date string for date-picker default and validation (today + offset Days)
+const getFutureDateString = (offsetDays = 2) => {
+  const date = new Date();
+  date.setDate(date.getDate() + offsetDays);
+  return date.toISOString().split('T')[0];
+};
+
 interface OrderBuilderProps {
   preselectedFlavor: string;
 }
@@ -22,7 +29,7 @@ export default function OrderBuilder({ preselectedFlavor }: OrderBuilderProps) {
     frostingStyle: 'Smooth / Minimal',
     customerName: '',
     customerPhone: '',
-    deliveryDate: '',
+    deliveryDate: getFutureDateString(2),
     deliveryTime: 'Evening (4 PM - 8 PM)',
     notes: ''
   });
@@ -302,6 +309,7 @@ export default function OrderBuilder({ preselectedFlavor }: OrderBuilderProps) {
                         name="deliveryDate"
                         value={formData.deliveryDate}
                         onChange={handleChange}
+                        min={getFutureDateString(1)}
                         required
                         className="w-full text-sm rounded-xl border border-stone-200 bg-stone-50/50 pl-9 pr-3 py-2.5 text-stone-800 outline-none focus:border-emerald-500 focus:bg-white transition-all font-medium cursor-pointer"
                       />
