@@ -125,7 +125,7 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 600,
     price1kg: 1100,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?auto=format&fit=crop&w=600&q=80",
+    image: "red bee.jpg ",
     flavors: ["Traditional Honey Bee Red", "Red Velvet Honey Whipped"],
     isPopular: false
   },
@@ -137,7 +137,7 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 650,
     price1kg: 1200,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1534120247760-c44c3e4a62f1?auto=format&fit=crop&w=600&q=80",
+    image: "nuttyvancho.jpg",
     flavors: ["Premium Double-Nutty Vancho", "Caramelized Nutty Choco-Vancho"],
     isPopular: true
   },
@@ -148,7 +148,7 @@ export const MENU_ITEMS: CakeItem[] = [
     description: "Seven gorgeous layers of colorful chiffon sponge baked vanilla-fresh, stacked elegantly with luscious tangy frosting.",
     price1kg: 1300,
     unitName: "1 Kg Only",
-    image: "https://images.unsplash.com/photo-1558961309-db6262759838?auto=format&fit=crop&w=600&q=80",
+    image: "rainbow.jpg",
     flavors: ["Vibrant Seven Colors Chiffon"],
     isPopular: false
   },
@@ -162,7 +162,7 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 550,
     price1kg: 950,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=600&q=80",
+    image: "vanila velvet.jpg",
     flavors: ["Pure Vanilla Bean Velvet", "Classic White Satin"],
     isPopular: false
   },
@@ -212,7 +212,7 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 550,
     price1kg: 950,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1562266641-1fcdc80abf35?auto=format&fit=crop&w=600&q=80",
+    image: "pineappledelight.jpg",
     flavors: ["Tropical Gold Pineapple", "Sweet & Tangy Pineapple Melt"],
     isPopular: false
   },
@@ -224,7 +224,7 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 550,
     price1kg: 950,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1604497076192-747f3e819752?auto=format&fit=crop&w=600&q=80",
+    image: "blueberry cakes.jpg",
     flavors: ["Wild Blueberry Classic", "Blueberry Lemon Zest"],
     isPopular: false
   },
@@ -236,7 +236,7 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 550,
     price1kg: 1000,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=600&q=80",
+    image: "tender coconut.jpg",
     flavors: ["Signature Karikku Coconut", "Tender Coconut & Honey Almond"],
     isPopular: true
   },
@@ -247,7 +247,7 @@ export const MENU_ITEMS: CakeItem[] = [
     description: "Premium fruit fest. Dense sponge filled with slow-cooked rich vanilla custard and seasonal diced orchard fresh fruits.",
     price1kg: 1300,
     unitName: "1 Kg Only",
-    image: "https://images.unsplash.com/photo-1511018556340-d16986a1c194?auto=format&fit=crop&w=600&q=80",
+    image: "fruit custard.jpg",
     flavors: ["Classic Rich Fruit Custard", "Double Layer Custard Dream"],
     isPopular: false
   },
@@ -297,7 +297,7 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 550,
     price1kg: 950,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80",
+    image: "dark chocolate truffle.jpg",
     flavors: ["Deep Intense Dark Belgian Truffle", "Mocha Chocolate Ganache"],
     isPopular: true
   },
@@ -309,7 +309,7 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 550,
     price1kg: 950,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=600&q=80",
+    image: "mangotruffle.jpg",
     flavors: ["Sweet Mango Velvet Truffle", "Alphonso Mango Truffle"],
     isPopular: false
   },
@@ -445,7 +445,7 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 850,
     price1kg: 1700,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&w=600&q=80",
+    image: "lotus biscoff.jpg",
     flavors: ["Lotus Speculoos Premium Cookie", "Double Biscoff Fusion"],
     isPopular: true
   },
@@ -459,7 +459,7 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 600,
     price1kg: 1200,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1541795795328-f073b763494e?auto=format&fit=crop&w=600&q=80",
+    image: "vanila tres leches.jpg",
     flavors: ["Original Three-Milk Vanilla", "Mild Sweet Milky Sponge"],
     isPopular: true
   },
@@ -471,7 +471,7 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 600,
     price1kg: 1200,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1604497076192-747f3e819752?auto=format&fit=crop&w=600&q=80",
+    image: "pistachio tres leches.jpg",
     flavors: ["Gourmet Iranian Pistachio Soak", "Creamy Pista Milky Heaven"],
     isPopular: false
   },
@@ -483,7 +483,7 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 600,
     price1kg: 1200,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1542826438-bd32f43d626f?auto=format&fit=crop&w=600&q=80",
+    image: "rosemilk tres leches.jpg",
     flavors: ["Nostalgic Rosemilk Blossom Soak", "Cardamom infusion Rosemilk"],
     isPopular: false
   },
