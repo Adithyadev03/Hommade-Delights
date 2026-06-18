@@ -49,7 +49,7 @@ export default function Footer() {
             <ul className="space-y-3 text-xs sm:text-sm text-stone-300 font-medium">
               <li className="flex items-start gap-2.5">
                 <MapPin className="h-4.5 w-4.5 text-emerald-400 flex-shrink-0 mt-0.5" />
-                <span>Koodu, Ganapathiyar Temple Road, Palayi Rd, Nileshwar, Kerala</span>
+                <span>Koodu, Palayi, Nileshwaram, Kerala</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="h-4 w-4 text-emerald-400 flex-shrink-0" />

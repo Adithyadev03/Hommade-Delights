@@ -54,8 +54,8 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
             className="flex items-center space-x-2 text-left group"
           >
             <div className="relative">
-              <div className="h-10 w-10 rounded-full bg-emerald-100 flex items-center justify-center border border-emerald-200 group-hover:scale-105 transition-transform duration-300">
-                <Cake className="h-5.5 w-5.5 text-emerald-700" />
+              <div className="h-10 w-10 rounded-full bg-emerald-100 flex items-center justify-center border border-emerald-200 group-hover:scale-105 transition-transform duration-300 overflow-hidden">
+                <img src="/logo.jpg" alt="Hommade Delights Logo" className="h-full w-full object-cover" referrerPolicy="no-referrer" />
               </div>
               <Sparkles className="absolute -top-1 -right-1 h-3.5 w-3.5 text-emerald-500 animate-pulse" />
             </div>

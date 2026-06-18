@@ -18,7 +18,7 @@ export default function ContactSection() {
     },
     {
       q: "Do you offer doorstep delivery in Nileshwar/Kasaragod?",
-      a: "Most customers choose self-pickup from our home kitchen at Ganapathiyar Temple Road. However, we coordinate comfortable and safe home deliveries of delicate structures in and around Nileshwar, Cheruvathur, and Kanhangad for a minimal transport fee."
+      a: "Most customers choose self-pickup from our home kitchen at Palayi, Nileshwaram. However, we coordinate comfortable and safe home deliveries of delicate structures in and around Nileshwar, Cheruvathur, and Kanhangad for a minimal transport fee."
     },
     {
       q: "Do you use artificial sweeteners or chemical preservatives?",
@@ -134,7 +134,7 @@ export default function ContactSection() {
                 </div>
 
                 <div className="absolute top-[220px] left-[280px] font-mono text-[9px] font-bold text-stone-500 bg-white/80 px-1.5 py-0.5 rounded shadow-xs border border-stone-200">
-                  Ganapathiyar Temple Road
+                  Palayi, Nileshwaram
                 </div>
 
                 {/* Ganapathiyar Temple pin indicator */}

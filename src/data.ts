@@ -8,15 +8,15 @@ import { CakeItem, Review } from './types';
 export const BAKERY_INFO = {
   name: "Hommade Delights",
   owner: "Anjana",
-  city: "Nileshwar",
+  city: "Nileshwaram",
   district: "Kasaragod",
   state: "Kerala",
   pincode: "671314",
   rating: 5.0,
   reviewsCount: 14,
   priceTier: "₹400–1,200",
-  address: "Koodu, Ganapathiyar Temple Road, Palayi Rd, Nileshwar, Kerala 671314",
-  mapDirectionsUrl: "https://maps.google.com/?q=Hommade+Delights+Koodu+Ganapathiyar+Temple+Road+Palayi+Rd+Nileshwar+Kerala+671314",
+  address: "Koodu, Palayi, Nileshwaram, Kerala 671314",
+  mapDirectionsUrl: "https://maps.google.com/?q=Hommade+Delights+Koodu+Palayi+Nileshwaram+Kerala+671314",
   phone: "+91 9207098314", // Her actual contact number
   whatsapp: "919207098314", // WhatsApp API format without spaces or symbols
   instagram: "hommade_delights", 
@@ -89,7 +89,7 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 400,
     price1kg: 700,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80",
+    image: "blackforest.jpg",
     flavors: ["Classic Black Forest", "Chocolate Cherry Fudge"],
     isPopular: false
   },
@@ -101,7 +101,7 @@ export const MENU_ITEMS: CakeItem[] = [
     price500g: 550,
     price1kg: 950,
     unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80",
+    image: "vancho.jpg",
     flavors: ["Signature Vancho Duo", "Vancho with Butter Crunch"],
     isPopular: true
   },
@@ -573,9 +573,21 @@ export const MENU_ITEMS: CakeItem[] = [
 
   // --- CAKES & DESSERTS (DREAM & CARROT CAKES) ---
   {
+    id: "cd-choco-dream",
+    name: "Choco Dream Cake",
+    category: "dream_cakes",
+    description: "Our signature best-selling 5-in-1 chocolate dessert tin. Crafted with layers of moist chocolate sponge, velvety mousse, rich fudge ganache, a crisp chocolate crack top, and elegant cocoa dusting.",
+    price500g: 500,
+    price1kg: 1000,
+    unitName: "500g / 1 Kg",
+    image: "chocodream.jpg",
+    flavors: ["Premium Double Chocolate Dream Layer"],
+    isPopular: true
+  },
+  {
     id: "cd-white-chocolate-dream",
     name: "White Chocolate Dream Cake",
-    category: "cakes_desserts",
+    category: "dream_cakes",
     description: "Indulgent five-layer custom tin-in-can dream cake layered with rich white chocolate sponge, creamy mousse, white ganache, and solid chocolate crack shell.",
     price500g: 550,
     price1kg: 1100,
@@ -587,15 +599,14 @@ export const MENU_ITEMS: CakeItem[] = [
   {
     id: "cd-mango-dream",
     name: "Mango Dream Cake",
-    category: "cakes_desserts",
+    category: "dream_cakes",
     description: "Lush five-layer tropical dream cake featuring smooth Alphonso mango compote layered with sweet vanilla cream and a hard snap-top shell inside a decorative tin.",
     price500g: 650,
     price1kg: 1300,
     unitName: "500g / 1 Kg",
     image: "mango dream.jpg",
     flavors: ["Alphonso Mango Dream Layer"],
-    isPopular: true,
-    isSeasonal: true
+    isPopular: true
   },
   {
     id: "cd-carrot-dates",
@@ -608,6 +619,18 @@ export const MENU_ITEMS: CakeItem[] = [
     image: "carrotdate.jpg",
     flavors: ["Classic Carrot & Date Spiced"],
     isPopular: false
+  },
+  {
+    id: "cd-ghee-cake",
+    name: "Aromatic Pure Ghee Cake",
+    category: "cakes_desserts",
+    description: "Incredibly soft, rich, and aromatic traditional home-baked cake made with premium pure golden cow ghee. Offers a stellar melt-in-your-mouth experience with every single slice.",
+    price500g: 350,
+    price1kg: 700,
+    unitName: "500g / 1 Kg",
+    image: "ghee.jpg",
+    flavors: ["Traditional Malabar Ghee Flavor"],
+    isPopular: true
   },
 
   // --- SPECIALTY ITEMS ---
@@ -643,6 +666,17 @@ export const MENU_ITEMS: CakeItem[] = [
     image: "vanilla popsicles-1.jpg",
     flavors: ["Classic Creamy Vanilla Popsicle"],
     isPopular: false
+  },
+  {
+    id: "sp-cream-kunafa",
+    name: "Cream Kunafa",
+    category: "specialty",
+    description: "Traditional golden crispy baked Middle Eastern dessert layered with lush, velvety sweet cream filling and soaked in aromatic sugar syrup, garnished with crunchy pistachios.",
+    price1kg: 400,
+    unitName: "6 Inches (Small Size)",
+    image: "cream kunafa.jpg",
+    flavors: ["Classic Arabian Cream Filling"],
+    isPopular: true
   }
 ];
 

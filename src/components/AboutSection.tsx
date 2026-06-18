@@ -85,7 +85,7 @@ export default function AboutSection() {
                 Anjana’s passion for baking started 7 years ago as a small, specialized home venture. While serving premium events and milestone occasions, she developed a sterling reputation for absolute reliability and taste. Initially baking in <span className="font-semibold text-emerald-900 bg-stone-100 px-1.5 py-0.5 rounded border border-stone-200">TVM (Thiruvananthapuram)</span>, she delivered iconic parent anniversary cakes and customized birthday specials that became central to family memories.
               </p>
               <p className="text-stone-700 leading-relaxed text-sm sm:text-base">
-                Now operating from <span className="font-semibold text-emerald-900 bg-stone-100 px-1.5 py-0.5 rounded border border-stone-200">Nileshwar, Kerala</span> on Ganapathiyar Temple Road, Anjana continues to cast her sweet spells. Each cake is designed individually, matching client custom visions with absolute moist cake texture and stunning clean decor.
+                Now operating from <span className="font-semibold text-emerald-900 bg-stone-100 px-1.5 py-0.5 rounded border border-stone-200">Palayi, Nileshwaram</span>, Anjana continues to cast her sweet spells. Each cake is designed individually, matching client custom visions with absolute moist cake texture and stunning clean decor.
               </p>
             </div>
 

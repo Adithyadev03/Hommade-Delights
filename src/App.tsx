@@ -125,7 +125,7 @@ export default function App() {
                 <div className="flex flex-wrap justify-center lg:justify-start items-center gap-4 text-xs sm:text-sm text-stone-600 font-medium">
                   <div className="flex items-center space-x-1.5 bg-white px-3 py-2 rounded-xl border border-stone-200/50 shadow-xs">
                     <MapPin className="h-4 w-4 text-emerald-800" />
-                    <span>Temple Road, Nileshwar, Kerala</span>
+                    <span>Palayi,Nileshwaram</span>
                   </div>
                   <div className="flex items-center space-x-1.5 bg-white px-3 py-2 rounded-xl border border-stone-200/50 shadow-xs">
                     <Award className="h-4 w-4 text-emerald-800" />

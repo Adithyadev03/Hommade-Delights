@@ -25,6 +25,7 @@ export default function MenuSection({ onSelectFlavor }: MenuSectionProps) {
     { key: 'vanilla_sponge', label: 'Vanilla Sponge' },
     { key: 'tres_leches', label: 'Tres Leches' },
     { key: 'brownies', label: 'Brownies' },
+    { key: 'dream_cakes', label: 'Dream Cakes' },
     { key: 'cakes_desserts', label: 'Cakes & Desserts' },
     { key: 'specialty', label: 'Specialty Items' }
   ];

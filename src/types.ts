@@ -13,7 +13,8 @@ export type CakeCategory =
   | 'tres_leches'
   | 'brownies'
   | 'cakes_desserts'
-  | 'specialty';
+  | 'specialty'
+  | 'dream_cakes';
 
 export interface CakeItem {
   id: string;
