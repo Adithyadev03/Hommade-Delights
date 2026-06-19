@@ -512,18 +512,7 @@ export const MENU_ITEMS: CakeItem[] = [
     flavors: ["Pista Milk soak with Rose Cream"],
     isPopular: false
   },
-  {
-    id: "tl-turkish",
-    name: "Turkish Milk Cake",
-    category: "tres_leches",
-    description: "Authentic Turkish sponge beautifully soaked in rich cream syrup and finished with a thick layer of our homemade golden caramel glaze.",
-    price500g: 650,
-    price1kg: 1300,
-    unitName: "500g / 1 Kg",
-    image: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?auto=format&fit=crop&w=600&q=80",
-    flavors: ["Authentic Golden Caramel Soak", "Caramelized Turkish Glory"],
-    isPopular: true
-  },
+
 
   // --- BROWNIES ---
   {
